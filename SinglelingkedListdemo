@@ -1,0 +1,211 @@
+package com.aiguigu.linked;
+
+import java.util.Stack;
+
+public class SinglelingkedListdemo {
+    public static void main(String[] args) {
+        HeroNode hero01=new HeroNode(1,"宋江","及时雨");
+        HeroNode hero02=new HeroNode(2,"宋江2","及时雨2");
+        HeroNode hero03=new HeroNode(3,"宋江3","及时雨3");
+        HeroNode hero04=new HeroNode(4,"宋江4","及时雨4");
+
+        SinglelinkedList singlelinkedList=new SinglelinkedList();
+       /* singlelinkedList.add(hero01);
+        singlelinkedList.add(hero02);
+        singlelinkedList.add(hero03);
+        singlelinkedList.add(hero04);*/
+        singlelinkedList.addByOrder(hero03);
+        singlelinkedList.addByOrder(hero02);
+        singlelinkedList.addByOrder(hero01);
+        singlelinkedList.addByOrder(hero04);
+        singlelinkedList.list();
+        HeroNode hero05=new HeroNode(4,"宋江5","及时雨5");
+        singlelinkedList.update(hero05);
+        singlelinkedList.list();
+        singlelinkedList.delete(3);
+        singlelinkedList.list();
+        singlelinkedList.bianli();
+        singlelinkedList.FindLastIndexNode(3);
+        System.out.println("fanzhuan");
+        reversetList(singlelinkedList.getHead());
+        singlelinkedList.list();
+        reverseprint(singlelinkedList.getHead());
+
+    }
+    public static void reverseprint(HeroNode head){
+        if(head.next==null){
+            return;
+        }
+        Stack<HeroNode> stack=new Stack<HeroNode>();
+        HeroNode temp=head.next;
+        while (temp!=null){
+            stack.push(temp);
+            temp=temp.next;
+        }
+        while (stack.size()>0){
+            System.out.println(stack.pop());
+        }
+    }
+    public static void reversetList(HeroNode head){
+        HeroNode TEMP=head.next;
+        HeroNode next=null;
+        HeroNode reversetnode=new HeroNode(0,"","");
+        if(head.next==null||head.next.next==null){
+            return;
+        }else {
+            while (TEMP!=null) {
+                next = TEMP.next;
+                TEMP.next = reversetnode.next;
+                reversetnode.next = TEMP;
+                TEMP=next;
+            }
+            head.next=reversetnode.next;
+
+        }
+    }
+}
+class SinglelinkedList{
+    private HeroNode head=new HeroNode(0,"","");
+    //添加节点到单链表
+    public void add(HeroNode heroNode){
+        HeroNode temp=head;
+        while (true){
+            if(temp.next==null){
+                break;
+            }else {
+                temp=temp.next;
+            }
+        }
+        temp.next=heroNode;
+    }
+    public HeroNode getHead(){
+        return head;
+    }
+    public void addByOrder(HeroNode heroNode){
+        HeroNode temp=head;
+        boolean flag=false;
+        while (true){
+            if(temp.next==null){
+                break;
+            }
+            else if (temp.next.no>heroNode.no){
+                break;
+            }else if (temp.next.no==heroNode.no){
+                flag=true;
+                break;
+            }
+            temp=temp.next;
+        }
+        if(flag==true){
+            System.out.println("yiyou");
+        }else {
+            heroNode.next=temp.next;
+            temp.next=heroNode;
+        }
+    }
+    public void update(HeroNode newheronode){
+        if(head.next==null){
+            System.out.println("kong");
+            return;
+        }else{
+            HeroNode temp=head.next;
+            boolean flag=false;
+            while (true){
+                if (temp==null){
+                    break;
+                } if(temp.no==newheronode.no){
+                    flag=true;
+                    break;
+                }
+                temp=temp.next;
+            }
+            if(flag=true){
+                temp.name=newheronode.name;
+                temp.Nickname=newheronode.Nickname;
+            }else {
+                System.out.println("wu");
+            }
+        }
+    }
+    public void delete(int num){
+        HeroNode temp=head;
+        boolean flag=false;
+        while (true){
+            if(temp.next==null){
+                System.out.println("kong");
+                break;
+            }if(temp.next.no==num){
+                flag=true;
+                break;
+            }
+            temp=temp.next;
+        }
+        if (flag==true){
+            temp.next=temp.next.next;
+        }else {
+            System.out.println("wu");
+        }
+    }
+    public int bianli(){
+        HeroNode temp=head.next;
+        int count=0;
+        while (true){
+            if (temp==null){
+                break;
+            }else {
+                temp=temp.next;
+                count++;
+            }
+        }
+         System.out.println("you "+count+"ge");
+        return count;
+    }
+    public HeroNode FindLastIndexNode(int index){
+        if(head.next==null){
+            return null;
+        }
+        if(index<=0||index>bianli()){
+            return null;
+        }
+        HeroNode temp=head.next;
+        for (int i = 0; i <bianli()-index ; i++) {
+            temp=temp.next;
+        }
+        System.out.println(temp);
+        return temp;
+    }
+    public void list(){
+        HeroNode temp=head.next;
+        while (true){
+            if(temp==null){
+                //System.out.println("kong");
+                break;
+            }else {
+                System.out.println(temp.no+temp.name+temp.Nickname);
+                temp=temp.next;
+            }
+        }
+    }
+
+}
+class HeroNode{
+    int no;
+    String name;
+    String Nickname;
+    HeroNode next;
+
+    public HeroNode(int no, String name, String nickname) {
+        this.no = no;
+        this.name = name;
+        Nickname = nickname;
+    }
+    @Override
+    public String toString() {
+        return "HeroNode{" +
+                "no=" + no +
+                ", name='" + name + '\'' +
+                ", Nickname='" + Nickname + '\'' +
+                //", next=" + next +
+                '}';
+    }
+}
