@@ -1,15 +1,9 @@
-package Demo03;
+package Demo04;
 
 public class Person {
     String name;
-    private int age;
-    public void show(){
-        System.out.println(name+age);
-    }
-    public void setAge(int num){
-        age=num;
-    }
-    public int getAge(){
-        return age;
+    public void sayhello(String who){
+
+        System.out.println(who+"nihao"+name);
     }
 }

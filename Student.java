@@ -1,17 +1,28 @@
-package cn.itcast.day06.demo01;
+package Demo04;
+
+import Demo03.Studengt;
 
 public class Student {
-    String name;
-    int age;
-    public void eat(){
-        System.out.println("chifan");
+    private String name;
+    private int age;
+    /*public Student(){
+        System.out.println("kn");
+    }*/
+    public Student(String name,int age){
+        this.name=name;
+        this.age=age;
 
     }
-    public void sleep(){
-        System.out.println("shuijiao");
-
+    public void setName(String name){
+        this.name=name;
     }
-    public void study(){
-        System.out.println("xuexi");
+    public String getName(){
+        return name;
+    }
+    public void setAge(int age){
+        this.age=age;
+    }
+    public int getAge(){
+        return age;
     }
 }
