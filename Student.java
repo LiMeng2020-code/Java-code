@@ -1,28 +1,39 @@
-package Demo04;
-
-import Demo03.Studengt;
+package Demo03;
 
 public class Student {
-    private String name;
-    private int age;
-    /*public Student(){
-        System.out.println("kn");
-    }*/
-    public Student(String name,int age){
-        this.name=name;
-        this.age=age;
 
+    private int age;
+    private String name;
+    private int id;
+    static String room;
+    private static int idcount=0;
+
+    public Student(){
+        idcount++;
     }
-    public void setName(String name){
-        this.name=name;
+    public Student(int age, String name) {
+        this.age = age;
+        this.name = name;
+        this.id=++idcount;
     }
-    public String getName(){
+    public int getAge() {
+        return age;
+    }
+    public void setAge(int age) {
+        this.age = age;
+    }
+    public String getName() {
         return name;
     }
-    public void setAge(int age){
-        this.age=age;
+    public void setName(String name) {
+        this.name = name;
     }
-    public int getAge(){
-        return age;
+
+    public int getid() {
+        return id;
+    }
+
+    public void setID(int id) {
+        this.id = id;
     }
 }

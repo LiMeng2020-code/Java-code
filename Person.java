@@ -1,9 +1,10 @@
-package Demo04;
+package Demo03;
 
 public class Person {
-    String name;
-    public void sayhello(String who){
-
-        System.out.println(who+"nihao"+name);
+    static {
+        System.out.println("jingtai daima");
+    }
+    public Person(){
+        System.out.println("gouzao daima");
     }
 }
