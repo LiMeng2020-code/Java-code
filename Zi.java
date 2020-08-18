@@ -1,11 +1,10 @@
-package cn.itcast.day09.Demo03;
+package cn.itcast.day09.Demo04;
 
 public class Zi extends Fu{
-    int num=20;
-    public void method(){
-        int num=200;
-        System.out.println(num);
-        System.out.println(this.num);
-        System.out.println(super.num);
+    public void methodzi(){
+        System.out.println("zifangfa");
     }
+    //public void method(){
+      //  System.out.println("chong02");
+    //}
 }
