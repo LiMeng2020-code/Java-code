@@ -1,5 +1,5 @@
-package cn.itcast.day09.demo02;
+package cn.itcast.day09.Demo03;
 
 public class Fu {
-    int numFu=10;
+    int num=10;
 }
