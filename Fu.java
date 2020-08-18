@@ -1,5 +1,11 @@
-package cn.itcast.day09.Demo03;
+package cn.itcast.day09.Demo04;
 
 public class Fu {
-    int num=10;
+    public void methodfu(){
+        System.out.println("fufangfa");
+
+    }
+    public void method(){
+        System.out.println("chong01");
+    }
 }
