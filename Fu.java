@@ -1,11 +1,9 @@
-package cn.itcast.day09.Demo04;
+package cn.itcast.day09.Demo05;
+
+import java.util.Objects;
 
 public class Fu {
-    public void methodfu(){
-        System.out.println("fufangfa");
-
-    }
-    public void method(){
-        System.out.println("chong01");
-    }
+ public Object method(){
+     return null;
+ }
 }
