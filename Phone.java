@@ -1,13 +1,14 @@
-package cn.itcast.day06.demo01;
+package cn.itcast.day09.Demo06;
 
 public class Phone {
-    String broud;
-    int price;
-    String color;
-    public void call(String who){
-        System.out.println("da"+who);
+    public void call(){
+        System.out.println("call");
     }
-    public void sendmassege(String number){
-        System.out.println(number);
+    public void send(){
+        System.out.println("send");
+
+    }
+    public void show(){
+        System.out.println("xianshihaoma");
     }
 }
