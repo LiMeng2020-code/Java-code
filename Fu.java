@@ -1,9 +1,10 @@
-package cn.itcast.day09.Demo05;
-
-import java.util.Objects;
+package cn.itcast.day09.Demo07;
 
 public class Fu {
- public Object method(){
-     return null;
- }
+    public Fu(){
+        System.out.println("fulei");
+    }
+    public Fu(int num){
+        System.out.println(num);
+    }
 }
