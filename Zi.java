@@ -1,8 +1,9 @@
-package cn.itcast.day09.Demo05;
+package cn.itcast.day09.Demo07;
 
 public class Zi extends Fu{
-    @Override
-    public String method(){
-     return null;
+    public Zi(){
+        super(9);
+        System.out.println("zilei");
+
     }
 }
