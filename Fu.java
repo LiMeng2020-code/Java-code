@@ -1,10 +1,8 @@
-package cn.itcast.day09.Demo07;
+package cn.itcast.day09.Demo08;
 
 public class Fu {
-    public Fu(){
+    int num=10;
+    public void method(){
         System.out.println("fulei");
-    }
-    public Fu(int num){
-        System.out.println(num);
     }
 }
