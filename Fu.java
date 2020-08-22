@@ -1,8 +1,8 @@
-package cn.itcast.day09.Demo08;
+package cn.itcast.day09.Demo10;
 
-public class Fu {
-    int num=10;
-    public void method(){
-        System.out.println("fulei");
+public abstract class Fu {
+    public Fu(){
+        System.out.println("chouxiangfulei");
     }
+    public abstract void eat();
 }
