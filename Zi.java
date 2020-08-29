@@ -1,12 +1,7 @@
-package cn.itcast.day09.Demo10;
+package cn.itcast.day10.Demo04;
 
 public class Zi extends Fu{
-    public Zi(){
-        System.out.println("zileigouzaofangfa");
-    }
-
-    @Override
-    public void eat() {
-        System.out.println("chifan");
+    public void method(){
+        System.out.println("zilei");
     }
 }
