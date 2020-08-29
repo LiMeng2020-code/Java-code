@@ -1,8 +1,10 @@
-package cn.itcast.day09.Demo10;
+package cn.itcast.day10.Demo04;
 
-public abstract class Fu {
-    public Fu(){
-        System.out.println("chouxiangfulei");
+public class Fu {
+    public void method(){
+        System.out.println("fulei");
     }
-    public abstract void eat();
+    public void methodfu(){
+        System.out.println("teyou");
+    }
 }
