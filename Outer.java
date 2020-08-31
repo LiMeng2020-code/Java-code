@@ -1,14 +1,14 @@
-package cn.itcast.day11.Demo03;
+package cn.itcast.day11.Demo04;
 
 public class Outer {
-    int num=10;
-    public class Inner{
-        int num=20;
-        public void method(){
-            int num=30;
-            System.out.println(num);
-            System.out.println(this.num);
-            System.out.println(Outer.this.num);
+    public void method(){
+        System.out.println("outermethod");
+        class Inner{
+            public void innermethod(){
+                System.out.println("innermethod");
+            }
         }
+        Inner inner=new Inner();
+        inner.innermethod();
     }
 }
