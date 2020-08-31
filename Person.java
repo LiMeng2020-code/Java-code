@@ -1,10 +1,12 @@
-package Demo03;
+package cn.itcast.day11.Demo01;
 
 public class Person {
-    static {
-        System.out.println("jingtai daima");
+    private final String name;
+    public Person() {
+        name="lm";
     }
-    public Person(){
-        System.out.println("gouzao daima");
+
+    public Person(String name) {
+        this.name = name;
     }
 }
