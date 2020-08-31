@@ -1,12 +1,7 @@
-package cn.itcast.day10.Demo05;
+package cn.itcast.day11.Demo01;
 
 public class Zi extends Fu{
-    int num=20;
-    int age=20;
-    public void method(){
-        System.out.println(num);
-    }
-    public void chifan(){
-        System.out.println("chifan");
+    public void mehtod(){
+        System.out.println("zilei fangfa");
     }
 }
