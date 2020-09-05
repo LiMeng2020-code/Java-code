@@ -1,12 +1,49 @@
-package cn.itcast.day11.Demo01;
+package cn.itcast.day12.Demo01;
+
+import java.util.Objects;
 
 public class Person {
-    private final String name;
+    private String name;
+    private int age;
+
     public Person() {
-        name="lm";
     }
 
-    public Person(String name) {
+    public Person(String name, int age) {
         this.name = name;
+        this.age = age;
+    }
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return age == person.age &&
+                Objects.equals(name, person.name);
+    }
+ /*
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+*/
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }
