@@ -1,39 +1,38 @@
-package Demo03;
+package cn.itcast.day13.demo05;
 
 public class Student {
-
-    private int age;
     private String name;
-    private int id;
-    static String room;
-    private static int idcount=0;
+    private int age;
 
-    public Student(){
-        idcount++;
+    public Student() {
     }
-    public Student(int age, String name) {
-        this.age = age;
+
+    public Student(String name, int age) {
         this.name = name;
-        this.id=++idcount;
-    }
-    public int getAge() {
-        return age;
-    }
-    public void setAge(int age) {
         this.age = age;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
 
-    public int getid() {
-        return id;
+    public int getAge() {
+        return age;
     }
 
-    public void setID(int id) {
-        this.id = id;
+    public void setAge(int age) {
+        this.age = age;
     }
 }
